@@ -14,7 +14,7 @@
     </ul>
 
     <ul class="list-group">
-      <li v-for="country in countryData.countries" v-bind:key="country.id" class="list-group-item">
+      <li v-for="country in countryData.countries" :title="country.details" v-bind:key="country.id" class="list-group-item">
         {{ country.name }}
       </li>
     </ul>
