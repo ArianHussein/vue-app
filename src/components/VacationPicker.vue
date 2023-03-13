@@ -12,16 +12,24 @@
         {{number}}
       </li>
     </ul>
+
+    <ul class="list-group">
+      <li v-for="country in countryData.countries" v-bind:key="country.id" class="list-group-item">
+        {{ country.name }}
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
+import countryData from '@/data/countryData';
 export default {
   name: 'VacationPicker',
   data(){
     return{
       count:0,
-      numberList: [1,2,3,4]
+      numberList: [1,2,3,4],
+      countryData
     }
   },
   methods:{
